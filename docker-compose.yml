@@ -1,0 +1,16 @@
+name: stilts-chatbot
+
+services:
+  stilts-chatbot:
+    container_name: stilts_chatbot
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      target: development
+
+    ports:
+      - "1007:1007"
+
+    volumes:
+      - .:/workspace:cached
+ 

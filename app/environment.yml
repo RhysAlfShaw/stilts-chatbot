@@ -1,0 +1,11 @@
+
+name: devcontainer
+channels:
+  - conda-forge
+  - nodefaults
+dependencies: # (use = for version locking)
+  - fastapi
+  - pytest # Code testing
+  - uvicorn # Starts up the api
+  - jinja2
+  - starlette
