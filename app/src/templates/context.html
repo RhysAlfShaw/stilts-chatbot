@@ -1,0 +1,12 @@
+<div>
+    {% for result in context %}
+    <div class="rag-result"
+         hx-get="/doc/highlighted?tag={{ result.location.tag }}&index={{ result.location.element_index }}&prefix={{ result.location.prefix_encoded }}&suffix={{ result.location.suffix_encoded }}"
+         hx-target="#viewer"
+         {# Note: hx-swap is often not needed when targeting an iframe #}
+         >
+        <div class="rag-text">{{ result.text | safe }}</div>
+        <div class="rag-score">Score: {{ "%.3f"|format(result.score) }}</div>
+    </div>
+{% endfor %}
+</div>

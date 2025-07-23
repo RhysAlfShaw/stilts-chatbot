@@ -9,3 +9,7 @@ dependencies: # (use = for version locking)
   - uvicorn # Starts up the api
   - jinja2
   - starlette
+  - pip
+  - pip:
+    - beautifulsoup4
+    - numpy

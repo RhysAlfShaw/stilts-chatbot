@@ -12,6 +12,7 @@ def parse_args():
     return parser.parse_args()
 
 
+
 if __name__ == "__main__":
     args = parse_args()
     uvicorn.run("src.main:app", host=args.host, port=args.port, reload=args.reload)
